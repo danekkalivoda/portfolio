@@ -1,4 +1,7 @@
 module.exports = {
+  corePlugins: {
+    container: false,
+  },
   theme: {
     extend: {
       spacing: {
@@ -9,8 +12,14 @@ module.exports = {
         '14': '14px',
       }
     },
-    container: {
-      padding: '1rem'
+    fluidContainer: {
+      'default': {
+        maxWidth: '1100px',   // defaults to null (no maximum width)
+        padding: '15px',      // defaults to '15px'
+        responsivePadding: {  // defaults to {}
+          'sm': '30px',       // at screen 'sm', the padding will change to 30px
+        },
+      },
     },
     colors: {
       background: {
@@ -87,9 +96,15 @@ module.exports = {
     },
   },
   variants: {
-    // Some useful comment
+    fluidContainer: ['responsive'],
   },
   plugins: [
-    // Some useful comment
+    require('tailwindcss-fluid-container')({
+      componentPrefix: 'c-',  // defaults to 'c-'
+      widthUtilities: true,   // defaults to true
+      paddingUtilities: true, // defaults to true
+      marginUtilities: true,  // defaults to true
+      negativeMarginUtilities: true,  // defaults to true
+    }),
   ]
 }
