@@ -8,6 +8,16 @@
   </Layout>
 </template>
 
+<page-query>
+query{
+  site: SiteSetting {
+    title,
+    footer_text,
+    about_text
+  }
+}
+</page-query>
+
 <script>
 export default {
   metaInfo: {

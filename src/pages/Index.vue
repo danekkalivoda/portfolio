@@ -56,7 +56,7 @@
 
 <page-query>
 query{
-  page: HomepageSetting {
+  site: SiteSetting {
     title,
     footer_text,
     about_text

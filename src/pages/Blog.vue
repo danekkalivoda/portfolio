@@ -26,6 +26,11 @@ query {
       headline,
       content      
     }
+  },
+  site: SiteSetting {
+    title,
+    footer_text,
+    about_text
   }
 }
 </page-query>
