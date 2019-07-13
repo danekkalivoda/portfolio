@@ -7,7 +7,7 @@
         <div class="text-green-700 leading-tight">Powered by Vue.js &amp Tailwind 1.0</div>
       </div>
       <div class="mt-8 sm:mt-0">
-        <img src="../../static/developer.svg" alt="hero" class="mx-auto sm:mx-0" />
+        <g-image src="../../static/developer.svg" alt="hero" class="mx-auto sm:mx-0" />
       </div>
     </div> <!-- end hero -->
 
@@ -16,10 +16,10 @@
 
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0">
-          <img src="../../static/mind_map.svg" alt="browser" />
+          <g-image src="../../static/mind_map.svg" alt="browser" />
         </div>
         <div class="w-1/2 px-8 hidden sm:flex justify-end">
-          <img src="../../static/code_review.svg" alt="mobile" />
+          <g-image src="../../static/code_review.svg" alt="mobile" />
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
-          <div><img src="../../static/images/avatar.jpg?nf_resize=fit&w=800" alt="avatar" class="w-32 h-32 rounded-full mb-8 lg:mb-0" /></div>
+          <div><g-image src="../../static/avatar.jpg" alt="avatar" class="w-32 h-32 rounded-full mb-8 lg:mb-0" /></div>
           <div class="flex-1 text-lg sm:text-xl ml-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat modi assumenda debitis laboriosam.</div>
         </div>
 
