@@ -1,50 +1,35 @@
 <template>
   <Layout>
-    <div class="c-container">
-      <p class="text-lg sm:text-xl mb-6">This gridsome theme was forked from my <a href="https://andremadarang.com">personal website</a>. I added more features and decided to release it as an open source project. Check it out on <a href="https://github.com/drehimself/gridsome-portfolio-starter">GitHub</a> or check out the <a href="https://www.youtube.com/watch?v=uHo6o1TNQeE">screencast I did</a>. Feel free to use it for your own site or projects! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, repellat. Dolores iure, quas perspiciatis rerum quaerat atque eum repellat autem.</p>
+    <div class="c-container text-lg sm:text-2xl lg:text-4xl mb-6 sm:mb-12 w-full md:w-3/4 text-center text-black dark:text-white">
+      <p>
+        Navrhuji UI/UX webových aplikací. <br> V Digital Solutions s.r.o. jsem 10 let designer.
+      </p>
     </div>
-
-
     <div class="overflow-x-hidden">
-      <div class="projects c-container text-xl border-t border-gray-500 border-b py-16 mb-16 relative">
-        <h2 class="font-bold mb-6" id="projects">Here are some projects I've worked on:</h2>
-
-        <div class="absolute right-0" style="top: 50px; transform: translate(100%) rotate(180deg)">
-          <svg width="170px" height="170px"><use xlink:href="#dots-triangle" /></svg>
+      <div class="projects c-container text-md border-t border-gray-300 dark:border-gray-800 border-b py-6 sm:py-12 mb-6 sm:mb-12 relative transition-all">
+        <div class="mx-auto md:w-2/3 text-gray-700 dark:text-gray-500">
+          <h2 class="font-bold mb-6 text-green-500 text-md sm:text-xl lg:text-2xl" id="about">O mě</h2>
+          <p>
+            Digitální design mě začal zajímat na střední škole. Nemám vystudovanou žádnou školu se zaměřením na design 
+            (vystudoval jsem potravinářskou školu - obor Mlynářství a průmyslová výroba krmiv), ale za dobu, po kterou se grafickému designu 
+            věnuji jsem se propracoval až k uvedeným grafickým návrhům. Moje motto je “Pokud musím design příliš vysvětlovat, je to špatný design”.
+          </p>
+          <p>
+            Před nastoupením do Digital Solutions jsem pracoval jako grafik v MAGNETU Blanche Porte a v komunikační agentuře Filip Trend. V nich jsem získal cenné znalosti spojené s tištěnou grafikou a DTP, které občas použiji ještě dnes. Primárně se ale věnuji návrhům webových aplikací, eshopů a v poslední době hlavně UI/UX responsivních informačních systémů.
+          </p>
         </div>
-
-        <ul class="text-lg sm:text-xl">
-          <li class="checkmark mb-6">
-            <div>Project One</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
-          </li>
-          <li class="checkmark mb-6">
-            <div>Project Two</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
-          </li>
-          <li class="checkmark mb-6">
-            <div>Project Three</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
-          </li>
-          <li class="checkmark mb-6">
-            <div>Project Four</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
-          </li>
-
-        </ul>
       </div> <!-- end projects -->
     </div>
 
     <div class="overflow-x-hidden border-gray-200 border-b">
       <div class="get-to-know-me c-container text-xl pb-16 relative">
-        <h2 class="font-bold mb-6" id="about">Get to know me:</h2>
+        <h2 class="font-bold mb-6" id="projects">Get to know me:</h2>
 
         <div class="absolute left-0" style="top: 50px; transform: translateX(-100%)">
           <svg width="170px" height="170px"><use xlink:href="#dots-triangle" /></svg>
         </div>
 
         <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
-          <div><g-image src="../../static/avatar.jpg" alt="avatar" class="w-32 h-32 rounded-full mb-8 lg:mb-0" /></div>
           <div class="flex-1 text-lg sm:text-xl ml-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat modi assumenda debitis laboriosam.</div>
         </div>
       </div> <!-- end get-to-know me -->

@@ -22,28 +22,9 @@ module.exports = {
       },
     },
     colors: {
-      background: {
-        primary: 'var(--bg-background-primary)',
-        secondary: 'var(--bg-background-secondary)',
-        tertiary: 'var(--bg-background-tertiary)',
-
-        form: 'var(--bg-background-form)',
-      },
-
-      copy: {
-        primary: 'var(--text-copy-primary)',
-        secondary: 'var(--text-copy-hover)',
-      },
-
-      'border-color': {
-        primary: 'var(--border-border-color-primary)',
-      },
-
       transparent: 'transparent',
-
       black: '#000',
       white: '#fff',
-
       green: {
         100: '#f0fff4',
         200: '#c6f6d5',
@@ -67,6 +48,13 @@ module.exports = {
         800: '#2d3748',
         900: '#1a202c',
       },
+    },
+    lineHeight: {
+      none: 1,
+      tight: 1.25,
+      normal: 1.5,
+      relaxed: 1.75,
+      loose: 2,
     },
     fontFamily: {
       sans: [
@@ -94,9 +82,63 @@ module.exports = {
         'monospace',
       ],
     },
+    transitionProperty: { // defaults to these values
+      'none': 'none',
+      'all': 'all',
+      'color': 'color',
+      'bg': 'background-color',
+      'border': 'border-color',
+      'colors': ['color', 'background-color', 'border-color'],
+      'opacity': 'opacity',
+      'transform': 'transform',
+    },
+    transitionDuration: { // defaults to these values
+      'default': '250ms',
+      '0': '0ms',
+      '100': '100ms',
+      '250': '250ms',
+      '500': '500ms',
+      '750': '750ms',
+      '1000': '1000ms',
+    },
+    transitionTimingFunction: { // defaults to these values
+      'default': 'ease',
+      'linear': 'linear',
+      'ease': 'ease',
+      'ease-in': 'ease-in',
+      'ease-out': 'ease-out',
+      'ease-in-out': 'ease-in-out',
+    },
+    transitionDelay: { // defaults to these values
+      'default': '0ms',
+      '0': '0ms',
+      '100': '100ms',
+      '250': '250ms',
+      '500': '500ms',
+      '750': '750ms',
+      '1000': '1000ms',
+    },
+    willChange: { // defaults to these values
+      'auto': 'auto',
+      'scroll': 'scroll-position',
+      'contents': 'contents',
+      'opacity': 'opacity',
+      'transform': 'transform',
+    },
   },
   variants: {
     fluidContainer: ['responsive'],
+
+    transitionProperty: ['responsive'],
+    transitionDuration: ['responsive'],
+    transitionTimingFunction: ['responsive'],
+    transitionDelay: ['responsive'],
+    willChange: ['responsive'],
+
+    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
+    borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
+    textColor: ['dark', 'dark-hover', 'dark-active', 'responsive', 'hover', 'focus', 'active', 'group-hover']
+
   },
   plugins: [
     require('tailwindcss-fluid-container')({
@@ -106,5 +148,7 @@ module.exports = {
       marginUtilities: true,  // defaults to true
       negativeMarginUtilities: true,  // defaults to true
     }),
+    require('tailwindcss-transitions')(),
+    require('tailwindcss-dark-mode')()
   ]
 }
