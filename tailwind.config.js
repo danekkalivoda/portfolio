@@ -7,6 +7,7 @@ module.exports = {
       spacing: {
         '80': '20rem',
         '108': '27rem',
+        'screen': '100vh'
       },
       borderWidth: {
         '14': '14px',
@@ -15,15 +16,28 @@ module.exports = {
     fluidContainer: {
       'default': {
         maxWidth: '1100px',   // defaults to null (no maximum width)
-        padding: '15px',      // defaults to '15px'
+        padding: '0px',      // defaults to '15px'
         responsivePadding: {  // defaults to {}
-          'sm': '30px',       // at screen 'sm', the padding will change to 30px
+          //'sm': '10px',       // at screen 'sm', the padding will change to 30px
         },
       },
     },
+    zIndex: {
+      '0': 0,
+      '10': 10,
+      '20': 20,
+      '30': 30,
+      '40': 40,
+      '50': 50,
+      '-10': -10,
+      '-20': -20,
+      '-30': -30,
+      '-40': -40,
+      '-50': -50,
+    },  
     colors: {
       transparent: 'transparent',
-      black: '#000',
+      black: '#141823',
       white: '#fff',
       green: {
         100: '#f0fff4',
@@ -58,7 +72,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Nunito Sans',
+        'IBM Plex Sans',
         'Roboto',
         '-apple-system',
         'BlinkMacSystemFont',
@@ -125,6 +139,32 @@ module.exports = {
       'opacity': 'opacity',
       'transform': 'transform',
     },
+    transform: { // defaults to this value
+      'none': 'none',
+    },
+    translate: { // defaults to {}
+      '1/2': '50%',
+      'full': '100%',
+      '-full': '-100%',
+      '-1/2': '-50%',
+    },
+    rotate: { // defaults to {}
+      '90': '90deg',
+      '-90': '-90deg',
+      '180': '180deg',
+      '270': '270deg',
+      '3d': ['0', '1', '0.5', '45deg'],
+    },
+    transformOrigin: { // defaults to these values
+      't': 'top',
+      'tr': 'top right',
+      'r': 'right',
+      'br': 'bottom right',
+      'b': 'bottom',
+      'bl': 'bottom left',
+      'l': 'left',
+      'tl': 'top left',
+    },
   },
   variants: {
     fluidContainer: ['responsive'],
@@ -134,8 +174,10 @@ module.exports = {
     transitionTimingFunction: ['responsive'],
     transitionDelay: ['responsive'],
     willChange: ['responsive'],
+    rotate: ['responsive'],
+    transformOrigin: ['responsive'],
 
-    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover'],
+    backgroundColor: ['hover', 'responsive', 'dark', 'dark-hover', 'dark-group-hover'],
     borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
     textColor: ['dark', 'dark-hover', 'dark-active', 'responsive', 'hover', 'focus', 'active', 'group-hover']
 
@@ -149,6 +191,9 @@ module.exports = {
       negativeMarginUtilities: true,  // defaults to true
     }),
     require('tailwindcss-transitions')(),
-    require('tailwindcss-dark-mode')()
+    require('tailwindcss-dark-mode')(),
+    require('tailwindcss-transforms')({
+      '3d': false, // defaults to false
+    })
   ]
 }

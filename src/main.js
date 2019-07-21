@@ -12,6 +12,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.use(VueScrollTo, {
     duration: 500,
     easing: "ease",
+    offset: -64,
   })
 
   Vue.use(VueFuse)
@@ -33,7 +34,7 @@ export default function (Vue, { router, head, isClient }) {
 
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700&display=swap&subset=latin-ext'
+    href: 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:200,400,700&display=swap&subset=latin-ext'
   })
 }
 

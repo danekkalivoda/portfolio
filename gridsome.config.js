@@ -4,11 +4,15 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const postcssNesting = require('postcss-nesting')
+const postcssNested = require('postcss-nested')
 const tailwind = require('tailwindcss')
 const purgecss = require('@fullhuman/postcss-purgecss')
 
 const postcssPlugins = [
   tailwind(),
+  postcssNesting(),
+  postcssNested()
 ]
 
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())

@@ -4,4 +4,53 @@
 
 @tailwind utilities;
 
-
+button:focus{
+  outline: 0px auto -webkit-focus-ring-color;
+}
+h1{
+  a{
+    @apply border-b border-gray-300 transition-border inline-block relative align-top overflow-hidden transition-all;
+    &:hover{
+      @apply text-gray-900 border-green-500;
+    }
+  }
+  .mode-dark &{
+    a{
+      @apply border-gray-800;
+      &:hover{
+        @apply text-white border-green-500;
+      }
+    }
+  }
+}
+.editor{
+  @apply text-gray-900 font-light;
+  .mode-dark &{
+    @apply text-gray-300
+  }
+  p{
+    @apply mb-4;
+  }
+  h2{
+    @apply font-bold mb-4 text-green-500 text-xl;
+  }
+  h3{
+    @apply font-medium mb-4 text-green-500 text-lg;
+  }
+  @screen sm {
+    h2{
+      @apply text-2xl;
+    }
+    h3{
+      @apply text-xl;
+    }
+  }
+  @screen lg {
+    h2{
+      @apply text-3xl;
+    }
+    h3{
+      @apply text-2xl;
+    }
+  }
+}
