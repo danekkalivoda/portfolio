@@ -1,9 +1,9 @@
 <template >
 <div :class="theme">
-  <div class="sm:pl-32 sm:pr-16 bg-white dark:bg-gray-900 w-full transition-bg">
+  <div class="sm:pl-32 sm:pr-16 bg-gray-200 dark:bg-gray-900 w-full transition-bg">
     <div class="content-wrapper font-sans leading-normal flex flex-col min-h-screen ">
       <header class="w-full sm:-ml-32 fixed z-50">
-        <nav class="flex flex-wrap justify-between sm:justify-start items-center bg-white dark:bg-gray-900 transition-bg p-4 sm:p-8">
+        <nav class="flex flex-wrap justify-between sm:justify-start items-center bg-gray-200 dark:bg-gray-900 transition-bg p-4 sm:p-8">
           <div class="flex flex-row items-center text-left w-auto">
             <g-link class="relative z-20">
               <g-image src="../../static/danek.jpg" :alt="$page.site.title" class="w-8 h-8 sm:w-16 sm:h-16 rounded-full" />
@@ -13,7 +13,7 @@
               <theme-switcher :theme="theme" @themeChanged="updateTheme" />
             </div>
             <div class="fixed left-0 top-0 z-40 ml-12 sm:ml-0 sm:rotate-90 transform-bl">
-              <span class="inline-block sm:rotate-180 my-6 sm:my-12 pr-1 pl-4 sm:pl-8 sm:pr-2 bg-white dark:bg-gray-900 text-sm sm:text-lg uppercase font-bold tracking-tight text-green-500 transition-bg">
+              <span class="inline-block sm:rotate-180 my-6 sm:my-12 pr-1 pl-4 sm:pl-8 sm:pr-2 bg-gray-200 dark:bg-gray-900 text-sm sm:text-lg uppercase font-bold tracking-tight text-green-500 transition-bg">
                   <span class="-translate-y-full">
                     Daniel Kalivoda
                   </span>
@@ -28,7 +28,7 @@
             <div class="h-full self-stretch mx-16 sm:ml-32 sm:mr-16 border-b border-gray-400 dark:border-gray-800 transition-all -translate-y-1/2"></div>
           </div>
           <ul
-              class="uppercase tracking-tight w-full sm:w-auto text-sm flex-col sm:flex-row sm:flex w-auto sm:justify-center bg-white dark:bg-gray-900 sm:px-5 transition-all z-50"
+              class="uppercase tracking-tight w-full sm:w-auto text-sm flex-col sm:flex-row sm:flex w-auto sm:justify-center bg-gray-200 dark:bg-gray-900 sm:px-5 transition-all z-50"
               :class="isOpen ? 'block': 'hidden'"
             >
               <li class="sm:inline-flex">

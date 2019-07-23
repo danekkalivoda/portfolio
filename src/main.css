@@ -9,25 +9,21 @@ button:focus{
 }
 h1{
   a{
-    @apply border-b border-gray-300 transition-border inline-block relative align-top overflow-hidden transition-all;
+    @apply text-green-500 border-b border-gray-300 inline-block relative align-top transition-all;
     &:hover{
-      @apply text-gray-900 border-green-500;
+      @apply text-green-600 border-green-500;
     }
   }
   .mode-dark &{
     a{
-      @apply border-gray-800;
+      @apply border-gray-700;
       &:hover{
-        @apply text-white border-green-500;
+        @apply text-green-400 border-green-500;
       }
     }
   }
 }
 .editor{
-  @apply text-gray-900 font-light;
-  .mode-dark &{
-    @apply text-gray-300
-  }
   p{
     @apply mb-4;
   }
@@ -35,7 +31,12 @@ h1{
     @apply font-bold mb-4 text-green-500 text-xl;
   }
   h3{
-    @apply font-medium mb-4 text-green-500 text-lg;
+    @apply font-medium mb-4 text-gray-900 text-lg;
+  }
+  .mode-dark &{
+    h3{
+      @apply text-white
+    }
   }
   @screen sm {
     h2{
@@ -54,3 +55,36 @@ h1{
     }
   }
 }
+
+.parent {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-column-gap: 16px;
+  grid-row-gap: 16px; 
+  .div1 { grid-area: 1 / 1 / 4 / 2; } 
+  .div2 { grid-area: 2 / 2 / 5 / 3; } 
+  .div3 { grid-area: 4 / 1 / 7 / 2; } 
+  .div4 { grid-area: 5 / 2 / 8 / 3; } 
+  .div5 { grid-area: 7 / 1 / 10 / 2; } 
+  .div6 { grid-area: 8 / 2 / 11 / 3; } 
+  .div7 { grid-area: 10 / 1 / 13 / 2; } 
+  .div8 { grid-area: 11 / 2 / 14 / 3; } 
+  .div9 { grid-area: 13 / 1 / 16 / 2; } 
+  @screen md {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    .div1 { grid-area: 4 / 5 / 8 / 9; }
+    .div2 { grid-area: 2 / 9 / 6 / 13; }
+    .div3 { grid-area: 8 / 7 / 11 / 10; }
+    .div4 { grid-area: 8 / 5 / 10 / 7; }
+    .div5 { grid-area: 6 / 2 / 9 / 5; }
+    .div6 { grid-area: 4 / 3 / 6 / 5; }
+    .div7 { grid-area: 1 / 4 / 4 / 7; }
+    .div8 { grid-area: 2 / 7 / 4 / 9; }
+    .div9 { grid-area: 6 / 9 / 8 / 11; }
+  }
+} 

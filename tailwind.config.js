@@ -1,6 +1,6 @@
 module.exports = {
   corePlugins: {
-    container: false,
+    container: true,
   },
   theme: {
     extend: {
@@ -11,6 +11,7 @@ module.exports = {
       },
       borderWidth: {
         '14': '14px',
+        '64': '64px', 
       }
     },
     fluidContainer: {
@@ -21,6 +22,12 @@ module.exports = {
           //'sm': '10px',       // at screen 'sm', the padding will change to 30px
         },
       },
+    },
+    aspectRatio: { // defaults to {}
+      'square': [1, 1],
+      '16/9': [16, 9],
+      '4/3': [4, 3],
+      '21/9': [21, 9],
     },
     zIndex: {
       '0': 0,
@@ -165,6 +172,11 @@ module.exports = {
       'l': 'left',
       'tl': 'top left',
     },
+    scale: { // defaults to {}
+      '90': '0.9',
+      '100': '1',
+      '110': '1.1'
+    },
   },
   variants: {
     fluidContainer: ['responsive'],
@@ -176,9 +188,12 @@ module.exports = {
     willChange: ['responsive'],
     rotate: ['responsive'],
     transformOrigin: ['responsive'],
+    scale: ['hover','responsive'],
+
+    aspectRatio: ['responsive'],
 
     backgroundColor: ['hover', 'responsive', 'dark', 'dark-hover', 'dark-group-hover'],
-    borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
+    borderColor: ['dark', 'dark-hover', 'dark-focus', 'dark-focus-within'],
     textColor: ['dark', 'dark-hover', 'dark-active', 'responsive', 'hover', 'focus', 'active', 'group-hover']
 
   },
@@ -194,6 +209,7 @@ module.exports = {
     require('tailwindcss-dark-mode')(),
     require('tailwindcss-transforms')({
       '3d': false, // defaults to false
-    })
+    }),
+    require('tailwindcss-aspect-ratio')(),
   ]
 }
