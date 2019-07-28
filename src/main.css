@@ -10,10 +10,10 @@ button:focus{
 h1{
   @apply text-sm text-gray-800;
   span{
-    @apply font-bold text-base text-gray-800
+    @apply font-bold text-base text-gray-800;
   }
   a{
-    @apply text-green-500 border-b border-gray-300 inline-block relative align-top transition-all;
+    @apply text-green-500 border-b border-gray-400 inline-block relative transition-all;
     &:hover{
       @apply text-green-600 border-green-500;
     }

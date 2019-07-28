@@ -5,7 +5,7 @@
       <a :href="'/' + $page.homepage.button_link" v-scroll-to="$page.homepage.button_link" class="px-8 py-2 mt-8 lg:px-12 lg:py-4 lg:mt-16 bg-green-500 hover:bg-white dark-hover:bg-white text-white hover:text-green-500 rounded-full text-md font-bold lg:text-lg transition-all uppercase hover:scale-110 shadow-lg">{{ $page.homepage.button_text}}</a>
     </div>
 
-    <div class="p-8 md:mt-screen sm:p-16 relative transition-all border-t-64 border-gray-200 bg-white dark:bg-black dark:border-gray-900 md:min-h-screen flex flex-col items-center justify-center" id="about">
+    <div class="p-8 md:mt-screen sm:p-16 relative transition-all shadow-lg z-40 bg-white dark:bg-black md:min-h-screen flex flex-col items-center justify-center" id="about">
       <div class="editor text-gray-900 dark:text-gray-300 mx-auto w-full lg:w-2/3 xl:w-1/2 lg:text-lg c-container" v-html="$page.homepage.textblock_1"></div>
       <div class="xl:flex xl:flex-row mt-16 c-container">
         <div class="w-full xl:mr-4 flex flex-row text-green-500 items-stretch xl:px-4">
@@ -57,16 +57,18 @@
       <a href="/#contact" v-scroll-to="'#projects'" class="px-8 py-2 mt-4 lg:px-12 lg:py-4 lg:mt-8 text-green-500 hover:text-gray-900 dark-hover:text-white rounded-full text-sm border border-green-500 transition-all uppercase">Napište mi</a>
     </div>
 
-    <div class="py-8 sm:py-16 xl:py-32 relative md:min-h-screen flex flex-col items-center bg-white dark:bg-gray-900 transition-bg flex-grow" id="projects">
+    <div class="py-8 sm:py-16 xl:py-32 relative md:min-h-screen flex flex-col items-center bg-gray-200 dark:bg-gray-900 transition-bg flex-grow" id="projects">
       <div class="px-8 sm:px-16 xl:px-32 flex flex-col w-full">
         <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center" v-html="$page.homepage.textblock_2">
         </div>
       </div>
       <div class="container">
         <div class="parent w-full">
-            <div v-for="(project, index) in $page.projects.edges" :key="project.node.name" class="aspect-ratio-16/9 relative" :class="'div' + [index + 1]">
-              <g-image :src="project.node.attachments[0].url" :alt="project.node.name" class="object-cover absolute w-full h-full" />
-            </div>
+            <a v-for="(project, index) in $page.projects.edges" :key="project.node.name" class="bg-white hover:scale-110 transition-all" :class="'div' + [index + 1]">
+              <div class="aspect-ratio-16/10 relative m-2">
+                <g-image :src="project.node.attachments[0].url" :alt="project.node.name" class="object-cover absolute left-0 right-0 top-0 bottom-0" />
+              </div>
+            </a>
         </div>
       </div>
     </div> 

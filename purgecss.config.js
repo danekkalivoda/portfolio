@@ -21,7 +21,8 @@ module.exports = {
     'g-image',
     'g-image--lazy',
     'g-image--loaded',
-    'mode-dark'
+    'mode-dark',
+    'div1', 'div2', 'div3', 'div4', 'div5', 'div6', 'div7', 'div8', 'div9', 
   ],
   extractors: [
     {

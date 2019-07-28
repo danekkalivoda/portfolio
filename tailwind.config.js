@@ -26,6 +26,7 @@ module.exports = {
     aspectRatio: { // defaults to {}
       'square': [1, 1],
       '16/9': [16, 9],
+      '16/10': [16, 10],
       '4/3': [4, 3],
       '21/9': [21, 9],
     },
