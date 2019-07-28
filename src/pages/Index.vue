@@ -2,7 +2,7 @@
   <Layout>
     <div class="px-8 pt-32 pb-16 sm:pt-32 sm:pb-16 md:pr-16 md:pl-32 md:min-h-screen md:left-0 md:right-0 md:fixed flex flex-col items-center justify-center w-full xl:m-auto text-center transition-all">
       <h1 v-html="$page.homepage.h1"></h1>
-      <a :href="$page.homepage.button_link" v-scroll-to="'page.homepage.button_link'" class="px-8 py-2 mt-8 lg:px-12 lg:py-4 lg:mt-16 bg-green-500 hover:bg-white dark-hover:bg-white text-white hover:text-green-500 rounded-full text-md font-bold lg:text-lg transition-all uppercase hover:scale-110 shadow-lg">{{ $page.homepage.button_text}}</a>
+      <a :href="'/' + $page.homepage.button_link" v-scroll-to="$page.homepage.button_link" class="px-8 py-2 mt-8 lg:px-12 lg:py-4 lg:mt-16 bg-green-500 hover:bg-white dark-hover:bg-white text-white hover:text-green-500 rounded-full text-md font-bold lg:text-lg transition-all uppercase hover:scale-110 shadow-lg">{{ $page.homepage.button_text}}</a>
     </div>
 
     <div class="p-8 md:mt-screen sm:p-16 relative transition-all border-t-64 border-gray-200 bg-white dark:bg-black dark:border-gray-900 md:min-h-screen flex flex-col items-center justify-center" id="about">
@@ -64,15 +64,9 @@
       </div>
       <div class="container">
         <div class="parent w-full">
-            <div class="div1 aspect-ratio-4/3 bg-green-100"></div>
-            <div class="div2 aspect-ratio-4/3 bg-green-200"></div>
-            <div class="div3 aspect-ratio-4/3 bg-green-300"></div>
-            <div class="div4 aspect-ratio-4/3 bg-green-400"></div>
-            <div class="div5 aspect-ratio-4/3 bg-green-500"></div>
-            <div class="div6 aspect-ratio-4/3 bg-green-600"></div>
-            <div class="div7 aspect-ratio-4/3 bg-green-700"></div>
-            <div class="div8 aspect-ratio-4/3 bg-green-800"></div>
-            <div class="div9 aspect-ratio-4/3 bg-green-900"></div>
+            <div v-for="(project, index) in $page.projects.edges" :key="project.node.name" class="aspect-ratio-16/9 relative" :class="'div' + [index + 1]">
+              <g-image :src="project.node.attachments[0].url" :alt="project.node.name" class="object-cover absolute w-full h-full" />
+            </div>
         </div>
       </div>
     </div> 
@@ -94,6 +88,17 @@ query{
     skill_1_text,
     skill_2_text,
     skill_3_text,
+  },
+  projects: allProjects {
+    edges {
+      node {
+        name
+        notes
+        attachments {
+          url
+        }
+      }
+    }
   }
 }
 </page-query>

@@ -37,10 +37,10 @@ module.exports = {
       use: '@gridsome/source-airtable',
       options: {
         apiKey: 'keygEegw3zV3Xtdni', // required
-        baseId: 'appKEuqOMBxbHVB8k', // required
-        tableName: 'Furniture', // required
-        typeName: 'Product', // required
-        route: '/products/:name' // optional
+        baseId: 'appINg4MozNchxoF8', // required
+        tableName: 'Projects', // required
+        typeName: 'Projects', // required
+        //route: '/products/:name' // optional
       }
     },
     {
