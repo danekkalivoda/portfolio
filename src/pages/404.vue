@@ -12,8 +12,7 @@
 query{
   site: SiteSetting {
     title,
-    footer_text,
-    about_text
+    footer_text
   }
 }
 </page-query>

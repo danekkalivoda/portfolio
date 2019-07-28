@@ -8,6 +8,10 @@ button:focus{
   outline: 0px auto -webkit-focus-ring-color;
 }
 h1{
+  @apply text-sm text-gray-800;
+  span{
+    @apply font-bold text-base text-gray-800
+  }
   a{
     @apply text-green-500 border-b border-gray-300 inline-block relative align-top transition-all;
     &:hover{
@@ -15,11 +19,38 @@ h1{
     }
   }
   .mode-dark &{
+    @apply text-gray-400;
+    span{
+      @apply text-white;
+    }
     a{
       @apply border-gray-700;
       &:hover{
         @apply text-green-400 border-green-500;
       }
+    }
+  }
+  @screen sm {
+    @apply text-base;
+    span{
+      @apply text-lg;
+    }
+  }
+  @screen md {
+    span{
+      @apply text-2xl;
+    }
+  }
+  @screen lg {
+    @apply text-2xl;
+    span{
+      @apply text-4xl;
+    }
+  }
+  @screen xl {
+    @apply text-4xl;
+    span{
+      @apply text-5xl;
     }
   }
 }
