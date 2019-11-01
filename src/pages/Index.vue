@@ -77,7 +77,7 @@
             <div v-for="(project, index) in $page.projects.edges" :key="project.node.name" class="group flex items-center justify-center mx-2 mb-16 mt-4 w-full relative flex-wrap lg:flex-no-wrap" :class="{'lg:flex-row-reverse': index % 2 === 0, 'lg:flex-row': index % 2 !== 0 }">
               <div class="w-full lg:w-1/2 xl:w-2/3 transition-all group-hover:scale-102">
                 <div class="overflow-hidden aspect-ratio-16/9 relative cursor-pointer shadow-lg">
-                  <img v-lazy="project.node.attachments[1].url" @click="openGallery(index)" :alt="project.node.name" class="absolute left-0 w-full h-full object-cover" />
+                  <img v-lazy="project.node.attachments[1].url" :alt="project.node.name" class="absolute left-0 w-full h-full object-cover" />
                 </div>
               </div>
               <div class="w-full sm:-mt-4 sm:px-0 sm:w-3/4 lg:w-2/3 lg:-mt-24 lg:w-2/5 xl:-mt-32" :class="{'lg:-mr-6 lg:text-right': index % 2 === 0, 'lg:-ml-6': index % 2 !== 0 }">
@@ -93,13 +93,7 @@
             </div>
         </div>
       </div>
-    </div> 
-    <LightBox
-      :images="getImages()" 
-      ref="lightbox"
-      :show-caption="false"
-      :show-light-box="false"
-    />
+    </div>
   </Layout>
 </template>
 
@@ -148,26 +142,8 @@ query{
 
 <script>
 import VueLazyLoad from 'vue-lazyload'
-import LightBox from 'vue-image-lightbox'
 
 export default {
-  components: {
-     LightBox
-  },
-  methods: {
-    openGallery(index) {
-      this.$refs.lightbox.showImage(index)
-    },
-    getImages() {
-      return this.$page.projects.edges.reduce((array, element) => {
-        array.push({
-          src: element.node.attachments[0].url,
-          thumb: element.node.attachments[1].thumbnails.large.url
-        });
-        return array
-      }, []);
-    }
-  },
   metaInfo() {
     return {
       title: this.$page.homepage.title

@@ -6,7 +6,6 @@ import DefaultLayout from '~/layouts/Default.vue'
 import VueScrollTo from 'vue-scrollto'
 import VueFuse from 'vue-fuse'
 import VueLazyLoad from 'vue-lazyload'
-require('vue-image-lightbox/dist/vue-image-lightbox.min.css')
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
