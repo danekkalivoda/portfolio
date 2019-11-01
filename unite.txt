@@ -1,0 +1,269 @@
+{
+  "title": "Danek Kalivoda",
+  "identifier": "danek",
+  "content_types": [
+    {
+      "title": "Navigace",
+      "identifier": "navigation",
+      "icon": "menu",
+      "content_label": "{title}",
+      "fields": [
+        {
+          "title": "Titulek",
+          "identifier": "title",
+          "type": "text"
+        },
+        {
+          "title": "Url",
+          "identifier": "url",
+          "type": "text"
+        },
+        {
+          "title": "Pořadí",
+          "identifier": "order",
+          "type": "sortindex"
+        }
+      ],
+      "views": [
+        {
+          "title": "All",
+          "identifier": "all",
+          "type": "table"
+        }
+      ],
+      "permissions": {
+        "view content": "true",
+        "list content": "true",
+        "create content": "member.type == \"editor\"",
+        "update content": "member.type == \"editor\"",
+        "delete content": "member.type == \"editor\""
+      }
+    },
+    {
+      "title": "Články",
+      "identifier": "articles",
+      "icon": "list",
+      "content_label": "{headline}",
+      "fields": [
+        {
+          "title": "Headline",
+          "identifier": "headline",
+          "type": "text"
+        },
+        {
+          "title": "Image",
+          "identifier": "image",
+          "type": "image",
+          "settings": {
+            "bucket": {
+              "endpoint": "https://endpoint.example",
+              "bucket": "XXX",
+              "key": "XXX",
+              "secret": "XXX"
+            }
+          }
+        },
+        {
+          "title": "Content",
+          "identifier": "content",
+          "type": "wysiwyg",
+          "settings": {
+            "heading": [
+              "h2",
+              "h3",
+              "p"
+            ]
+          }
+        }
+      ],
+      "views": [
+        {
+          "title": "All",
+          "identifier": "all",
+          "type": "table",
+          "settings": {
+            "fields": {
+              "headline": "Headline",
+              "created": "Created at"
+            }
+          }
+        }
+      ],
+      "permissions": {
+        "view content": "true",
+        "list content": "true",
+        "create content": "member.type == \"editor\"",
+        "update content": "member.type == \"editor\"",
+        "delete content": "member.type == \"editor\""
+      }
+    },
+    {
+      "title": "Stránky",
+      "identifier": "pages",
+      "icon": "file",
+      "content_label": "{type} #{id}",
+      "fields": [
+        {
+          "title": "Headline",
+          "identifier": "headline",
+          "type": "text"
+        },
+        {
+          "title": "Needs review",
+          "identifier": "needs_review",
+          "type": "checkbox"
+        },
+        {
+          "title": "Position",
+          "identifier": "position",
+          "type": "sortindex"
+        }
+      ],
+      "views": [
+        {
+          "title": "All",
+          "identifier": "all",
+          "type": "table"
+        }
+      ],
+      "permissions": {
+        "view content": "true",
+        "list content": "true",
+        "create content": "member.type == \"editor\"",
+        "update content": "member.type == \"editor\"",
+        "delete content": "member.type == \"editor\""
+      }
+    }
+  ],
+  "setting_types": [
+    {
+      "title": "Homepage",
+      "identifier": "homepage",
+      "fields": [
+        {
+          "title": "Titulek stránky",
+          "identifier": "title",
+          "type": "text"
+        },
+        {
+          "title": "Nadpis H1",
+          "identifier": "h1",
+          "type": "textarea",
+          "settings": {
+            "rows": 2
+          }
+        },
+        {
+          "title": "Text tlačítka pod nadpisem",
+          "identifier": "button_text",
+          "type": "text"
+        },
+        {
+          "title": "Odkaz tlačítka pod nadpisem",
+          "identifier": "button_link",
+          "type": "text"
+        },
+        {
+          "title": "První blok textu",
+          "identifier": "textblock_1",
+          "type": "wysiwyg"
+        },
+        {
+          "title": "První schopnost - nadpis",
+          "identifier": "skill_1_header",
+          "type": "text"
+        },
+        {
+          "title": "První schopnost",
+          "identifier": "skill_1_text",
+          "type": "wysiwyg"
+        },
+        {
+          "title": "Druhá schopnost - nadpis",
+          "identifier": "skill_2_header",
+          "type": "text"
+        },
+        {
+          "title": "Druhá schopnost",
+          "identifier": "skill_2_text",
+          "type": "wysiwyg"
+        },
+        {
+          "title": "Třetí schopnost - nadpis",
+          "identifier": "skill_3_header",
+          "type": "text"
+        },
+        {
+          "title": "Třetí schopnost",
+          "identifier": "skill_3_text",
+          "type": "wysiwyg"
+        },
+        {
+          "title": "Druhý blok textu",
+          "identifier": "textblock_2",
+          "type": "wysiwyg"
+        }
+      ],
+      "permissions": {
+        "view setting": "true",
+        "update setting": "member.type == \"editor\""
+      },
+      "webhooks": [
+        {
+          "query": "query {title, h1, button_text, button_link, textblock_1, skill_1_header, skill_1_text, skill_2_header, skill_2_text, skill_3_header, skill_3_text, textblock_2}",
+          "url": "https://api.netlify.com/build_hooks/5d2f773192cf90a178abe443",
+          "check_ssl": true,
+          "content_type": "json",
+          "condition": "event == \"update\""
+        }
+      ]
+    },
+    {
+      "title": "Nastavení",
+      "identifier": "site",
+      "fields": [
+        {
+          "title": "Popis vedle mojí fotky",
+          "identifier": "title",
+          "type": "text"
+        },
+        {
+          "title": "Text v patičce",
+          "identifier": "footer_text",
+          "type": "wysiwyg"
+        }
+      ],
+      "permissions": {
+        "view setting": "true",
+        "update setting": "member.type == \"editor\""
+      },
+      "webhooks": [
+        {
+          "query": "query {title, footer_text}",
+          "url": "https://api.netlify.com/build_hooks/5d2f773192cf90a178abe443",
+          "check_ssl": true,
+          "content_type": "json",
+          "condition": "event == \"update\""
+        }
+      ]
+    }
+  ],
+  "domain_member_types": [
+    {
+      "title": "Editor",
+      "identifier": "editor",
+      "domain_member_label": "{accessor}",
+      "fields": []
+    },
+    {
+      "title": "Viewer",
+      "identifier": "viewer",
+      "domain_member_label": "{accessor}",
+      "fields": []
+    }
+  ],
+  "permissions": {
+    "view domain": "true",
+    "update domain": "false"
+  }
+}

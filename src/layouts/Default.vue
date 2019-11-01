@@ -2,7 +2,7 @@
 <div :class="theme">
   <div class="sm:pl-32 sm:pr-16 bg-gray-200 dark:bg-gray-900 w-full transition-bg">
     <div class="content-wrapper font-sans leading-normal flex flex-col min-h-screen ">
-      <header class="w-full sm:-ml-32 fixed z-50">
+      <header class="w-full sm:-ml-32 fixed z-60">
         <nav class="flex flex-wrap justify-between sm:justify-start items-center bg-gray-200 dark:bg-gray-900 transition-bg py-4 px-8 sm:p-8">
           <div class="flex flex-row items-center text-left w-auto">
             <g-link class="relative z-20">
@@ -42,7 +42,7 @@
       <div class="flex-grow">
         <slot/>
       </div>
-      <footer id="contact">
+      <footer id="contact" class="bg-gray-200 dark:bg-gray-900 transition-bg z-40">
         <div class="c-container mx-auto flex flex-col lg:flex-row items-center justify-between pt-8">
           <div class="text-gray-500 dark:text-gray-700 text-center text-xs md:text-sm px-16 w-full editor" v-html="$static.site.footer_text"></div>
         </div>
@@ -54,7 +54,7 @@
 
 <static-query>
 query {
-  metaData {
+  metadata {
     siteName
   },
   site: SiteSetting {

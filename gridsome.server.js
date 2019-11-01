@@ -10,8 +10,8 @@ const path = require('path');
 const pick = require('lodash.pick');
 
 module.exports = function (api) {
-  api.loadSource(({ addContentType }) => {
-    const contentType = addContentType({
+/*  api.loadSource(({ addCollection }) => {
+    const contentType = addCollection({
       typeName: 'unite',
       route: 'blog/:slug' // add this for one dynamic route...
     })
@@ -47,5 +47,5 @@ module.exports = function (api) {
         }
       })
     })
-  });
+  });*/
 }

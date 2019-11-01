@@ -25,12 +25,9 @@ module.exports = {
     {
       use: 'gridsome-source-graphql',
       options: {
-        url: 'https://kalivoda.unitecms.io/danek/api',
+        url: 'http://unitecms.felix.party/danek/danek/api?token=yQP8qdT584UCIiPe-uawOBp_ZeyWYJNV2YplvblEwq4',
         fieldName: 'unite',
-        typeName: 'unite',
-        headers: {
-          Authorization: `OvwJDmdUpWu-UKBxYvqbl5P25JNX2mXRGZsvpElZvZY`,
-        },
+        typeName: 'unite'
       },
     },
     {

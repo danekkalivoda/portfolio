@@ -37,6 +37,11 @@ module.exports = {
       '30': 30,
       '40': 40,
       '50': 50,
+      '60': 60,
+      '70': 70,
+      '80': 80,
+      '90': 90,
+      '100': 100,
       '-10': -10,
       '-20': -20,
       '-30': -30,
@@ -59,6 +64,18 @@ module.exports = {
         900: '#22543d',
       },
 
+      yellow: {
+        100: '#fffff0',
+        200: '#fefcbf',
+        300: '#faf089',
+        400: '#f6e05e',
+        500: '#ecc94b',
+        600: '#d69e2e',
+        700: '#b7791f',
+        800: '#975a16',
+        900: '#744210',
+      },
+      
       gray: {
         100: '#f7fafc',
         200: '#edf2f7',
@@ -70,6 +87,39 @@ module.exports = {
         800: '#2d3748',
         900: '#1a202c',
       },
+      teal: {
+        100: '#e6fffa',
+        200: '#b2f5ea',
+        300: '#81e6d9',
+        400: '#4fd1c5',
+        500: '#38b2ac',
+        600: '#319795',
+        700: '#2c7a7b',
+        800: '#285e61',
+        900: '#234e52',
+      },
+      blue: {
+        100: '#ebf8ff',
+        200: '#bee3f8',
+        300: '#90cdf4',
+        400: '#63b3ed',
+        500: '#4299e1',
+        600: '#3182ce',
+        700: '#2b6cb0',
+        800: '#2c5282',
+        900: '#2a4365',
+      },
+      indigo: {
+        100: '#ebf4ff',
+        200: '#c3dafe',
+        300: '#a3bffa',
+        400: '#7f9cf5',
+        500: '#667eea',
+        600: '#5a67d8',
+        700: '#4c51bf',
+        800: '#434190',
+        900: '#3c366b',
+      }
     },
     lineHeight: {
       none: 1,
@@ -80,7 +130,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'IBM Plex Sans',
+        'Nunito-sans',
         'Roboto',
         '-apple-system',
         'BlinkMacSystemFont',
@@ -155,6 +205,7 @@ module.exports = {
       'full': '100%',
       '-full': '-100%',
       '-1/2': '-50%',
+      '0': '0'
     },
     rotate: { // defaults to {}
       '90': '90deg',
@@ -175,12 +226,17 @@ module.exports = {
     },
     scale: { // defaults to {}
       '90': '0.9',
+      '95': '0.95',
       '100': '1',
+      '102': '1.02',
+      '105': '1.05',
       '110': '1.1'
     },
   },
   variants: {
     fluidContainer: ['responsive'],
+
+    padding: ['responsive', 'hover', 'focus'],
 
     transitionProperty: ['responsive'],
     transitionDuration: ['responsive'],
@@ -189,9 +245,12 @@ module.exports = {
     willChange: ['responsive'],
     rotate: ['responsive'],
     transformOrigin: ['responsive'],
-    scale: ['hover','responsive'],
+    scale: ['group-hover', 'hover','responsive'],
 
     aspectRatio: ['responsive'],
+    translate: ['responsive','group-hover'],
+    opacity: ['responsive','group-hover'],
+    boxShadow: ['responsive','group-hover'],
 
     backgroundColor: ['hover', 'responsive', 'dark', 'dark-hover', 'dark-group-hover'],
     borderColor: ['dark', 'dark-hover', 'dark-focus', 'dark-focus-within'],
