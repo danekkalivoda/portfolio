@@ -23,7 +23,7 @@
     "postcss-nested": "^4.1.2",
     "postcss-nesting": "^7.0.1",
     "tailwindcss-aspect-ratio": "^2.0.0",
-    "tailwindcss-dark-mode": "^1.1.0",
+    "tailwindcss-dark-mode": "ChanceArthur/tailwindcss-dark-mode#26d925d074ba11899ec7d91c1f55a274c7425968",
     "tailwindcss-fluid-container": "^2.1.0",
     "tailwindcss-transforms": "^2.2.0",
     "tailwindcss-transitions": "^2.1.0",
@@ -32,6 +32,6 @@
     "vue-scrollto": "^2.15.0"
   },
   "devDependencies": {
-    "tailwindcss": "^1.1.0"
+    "tailwindcss": "^1.1.3"
   }
 }

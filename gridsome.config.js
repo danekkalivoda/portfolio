@@ -13,14 +13,14 @@ const postcssPlugins = [
   tailwind(),
   postcssNesting(),
   postcssNested()
-]
+];
 
-//if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss());
 
 module.exports = {
   siteName: 'Daniel Kalivoda',
   siteDescription: 'Mám rád funkční věci, které vycházejí z vysokých nároků klienta. Navrhuji weby, mobilní aplikace a UI/UX interních informačních systémů. Tištěnou grafiku u mě nehledejte.',
-  siteUrl: 'https://gridsome-portfolio-starter.netlify.com',
+  siteUrl: 'https://kalivoda.netlify.com',
   plugins: [
     {
       use: 'gridsome-source-graphql',

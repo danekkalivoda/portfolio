@@ -22,6 +22,7 @@ module.exports = {
     'g-image--lazy',
     'g-image--loaded',
     'mode-dark'
+    ''
   ],
   extractors: [
     {
