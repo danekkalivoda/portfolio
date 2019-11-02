@@ -254,8 +254,7 @@ module.exports = {
 
     backgroundColor: ['hover', 'responsive', 'dark', 'dark-hover', 'dark-group-hover'],
     borderColor: ['dark', 'dark-hover', 'dark-focus', 'dark-focus-within'],
-    textColor: ['dark', 'dark-hover', 'dark-active', 'responsive', 'hover', 'focus', 'active', 'group-hover']
-
+    textColor: ['dark', 'dark-hover', 'dark-active', 'responsive', 'hover', 'focus', 'active', 'group-hover'],
   },
   plugins: [
     require('tailwindcss-fluid-container')({

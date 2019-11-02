@@ -141,7 +141,7 @@ query{
 </page-query>
 
 <script>
-
+import VueLazyLoad from 'vue-lazyload'
 export default {
   metaInfo() {
     return {
