@@ -37,7 +37,6 @@ module.exports = {
         baseId: 'appINg4MozNchxoF8', // required
         tableName: 'Projects', // required
         typeName: 'Projects', // required
-        //route: '/products/:name' // optional
       }
     },
     {

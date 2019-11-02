@@ -7,10 +7,10 @@
 
     <div class="p-8 md:mt-screen sm:p-16 relative transition-all shadow-lg z-50 bg-white dark:bg-black md:min-h-screen flex flex-col items-center justify-center" id="about">
       <div class="c-container flex flex-row flex-wrap items-start justify-center">
-        <div class="w-1/2 mb-4 lg:mb-8 mx-auto md:w-1/3 lg:w-1/4 xl:mx-0">
+        <div class="w-1/2 mb-4 lg:mb-8 mx-auto md:w-1/3 lg:w-1/5 xl:mx-0">
           <g-image src="../../static/danek.jpg" :alt="$page.site.title" class=" max-w-full max-w-1/2 mx-auto rounded-full" />
         </div>
-        <div class="w-full lg:w-3/4 lg:pl-8 xl:w-1/2">
+        <div class="w-full lg:w-3/4 lg:pl-8 xl:w-4/5">
           <div class="editor text-gray-900 dark:text-gray-300 w-full lg:text-lg" v-html="$page.homepage.textblock_1"></div>
         </div>
       </div>
@@ -40,7 +40,7 @@
           <div class="w-8 md:w-16 mr-2 md:mr-4 xl:mr-6 self-start">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-16 md:h-16 text-green-500 current-color" width="64" height="64" viewBox="0 0 64 64"><title>web-design</title><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" fill="currentcolor" stroke="currentcolor"><line fill="none" stroke="currentcolor" stroke-miterlimit="10" x1="2" y1="20" x2="40.012" y2="20" stroke-linecap="butt"></line> <polyline fill="none" stroke="currentcolor" stroke-miterlimit="10" points="62,17 62,58 2,58 2,6 54.033,6 " stroke-linecap="butt"></polyline> <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="10" y1="13" x2="14" y2="13"></line> <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="20" y1="13" x2="24" y2="13"></line> <path data-color="color-2" fill="none" stroke-miterlimit="10" d="M31.848,28.152L56,4.036 c1.381-1.381,3.619-1.381,5,0l0,0c1.381,1.381,1.381,3.619,0,5L36.849,33.151" stroke-linecap="butt"></path> <path data-color="color-2" fill="none" stroke-miterlimit="10" d="M35.08,29.92 C33.842,28.682,32.197,28,30.446,28c-1.751,0-3.397,0.682-4.634,1.92C23.351,32.38,23,42,23,42s9.62-0.351,12.08-2.811 c1.238-1.238,1.92-2.884,1.92-4.634S36.318,31.158,35.08,29.92z"></path> <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="10" y1="50" x2="54" y2="50"></line></g></svg>
           </div>
-          <div class="editor text-gray-800 dark:text-gray-600 leading-snug text-xs lg:text-sm mt-1">
+          <div class="editor text-gray-700 dark:text-gray-600 leading-snug text-sm mt-1">
             <h3>{{ $page.homepage.skill_1_header}}</h3>
             <div v-html="$page.homepage.skill_1_text"></div>
           </div>
@@ -49,7 +49,7 @@
           <div class="w-8 md:w-16 mr-2 md:mr-4 xl:mr-6 self-start">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-16 md:h-16 text-blue-500 current-color" width="64" height="64" viewBox="0 0 64 64"><title>window-dev</title><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" fill="currentcolor" stroke="currentcolor"><polyline data-color="color-2" fill="none" stroke-miterlimit="10" points=" 22,34 18,38 22,42 "></polyline> <polyline data-color="color-2" fill="none" stroke-miterlimit="10" points=" 42,34 46,38 42,42 "></polyline> <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="28" y1="46" x2="36" y2="30"></line> <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="10" y1="13" x2="14" y2="13"></line> <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="20" y1="13" x2="24" y2="13"></line> <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="43" y1="13" x2="54" y2="13"></line> <line fill="none" stroke="currentcolor" stroke-miterlimit="10" x1="2" y1="20" x2="62" y2="20"></line> <rect x="2" y="6" fill="none" stroke="currentcolor" stroke-miterlimit="10" width="60" height="52"></rect></g></svg>
           </div>
-          <div class="editor text-gray-800 dark:text-gray-600 leading-snug text-xs lg:text-sm mt-1">
+          <div class="editor text-gray-700 dark:text-gray-600 leading-snug text-sm mt-1">
             <h3>{{ $page.homepage.skill_2_header}}</h3>
             <div v-html="$page.homepage.skill_2_text"></div>
           </div>
@@ -58,7 +58,7 @@
           <div class="w-8 md:w-16 mr-2 md:mr-4 xl:mr-6 self-start">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 md:w-16 md:h-16 text-yellow-500 current-color" width="64" height="64" viewBox="0 0 64 64"><title>b-meeting</title><g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" fill="currentcolor" stroke="currentcolor"><polygon data-color="color-2" fill="none" stroke-miterlimit="10" points=" 62,2 28,2 28,30 38,22 62,22 "></polygon> <circle fill="none" stroke="currentcolor" stroke-miterlimit="10" cx="50" cy="36" r="6"></circle> <circle fill="none" stroke="currentcolor" stroke-miterlimit="10" cx="14" cy="36" r="6"></circle> <path fill="none" stroke="currentcolor" stroke-miterlimit="10" d="M26,60v-5.965 c0-1.42-0.745-2.726-1.967-3.449C22.088,49.435,18.716,48,14,48c-4.777,0-8.127,1.426-10.052,2.575C2.736,51.299,2,52.601,2,54.013 V60H26z"></path> <path fill="none" stroke="currentcolor" stroke-miterlimit="10" d="M62,60v-5.965 c0-1.42-0.745-2.726-1.967-3.449C58.088,49.435,54.716,48,50,48c-4.777,0-8.127,1.426-10.052,2.575 C38.736,51.299,38,52.601,38,54.013V60H62z"></path></g></svg>
           </div>
-          <div class="editor text-gray-800 dark:text-gray-600 leading-snug text-xs lg:text-sm mt-1">
+          <div class="editor text-gray-700 dark:text-gray-600 leading-snug text-sm mt-1">
             <h3>{{ $page.homepage.skill_3_header}}</h3>
             <div v-html="$page.homepage.skill_3_text"></div>
           </div>
@@ -67,25 +67,30 @@
       <a :href="'/' + $page.homepage.skills_button_link" v-scroll-to="$page.homepage.skills_button_link" class="px-8 py-2 mt-4 lg:px-12 lg:py-4 lg:mt-8 text-green-500 font-bold hover:text-gray-900 dark-hover:text-white rounded-full text-sm border-2 border-gray-300 dark:border-gray-700 transition-all uppercase hover:scale-105">{{ $page.homepage.skills_button_text}}</a>
     </div>
 
-    <div class="py-8 sm:py-16 xl:py-32 relative md:min-h-screen flex flex-col z-40 items-center bg-gray-200 dark:bg-gray-900 transition-bg flex-grow" id="projects">
+    <div class="py-8 sm:pt-16 xl:pt-32 relative md:min-h-screen flex flex-col z-40 items-center bg-gray-200 dark:bg-gray-900 transition-bg flex-grow" id="projects">
       <div class="px-8 sm:px-16 xl:px-32 flex flex-col w-full">
         <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center" v-html="$page.homepage.textblock_2">
         </div>
       </div>
-      <div class="w-full max-w-6xl overflow-hidden">
+      <div class="w-full max-w-6xl overflow-hidden sm:overflow-visible">
         <div class="-mx-2 flex flex-wrap">
-            <div v-for="(project, index) in $page.projects.edges" :key="project.node.name" class="group flex items-center justify-center mx-2 mb-16 mt-4 w-full relative flex-wrap lg:flex-no-wrap" :class="{'lg:flex-row-reverse': index % 2 === 0, 'lg:flex-row': index % 2 !== 0 }">
+            <div v-for="(project, index) in $page.projects.edges" :key="project.node.name" class="group flex items-end justify-center px-2 mb-16 mt-4 w-full relative flex-wrap lg:flex-no-wrap" :class="{'lg:flex-row-reverse': index % 2 === 0, 'lg:flex-row': index % 2 !== 0 }">
               <div class="w-full lg:w-1/2 xl:w-2/3 transition-all group-hover:scale-102">
-                <div class="overflow-hidden aspect-ratio-16/9 relative cursor-pointer shadow-lg">
-                  <img v-lazy="project.node.attachments[1].url" :alt="project.node.name" class="absolute left-0 w-full h-full object-cover" />
+                <div class="relative">
+                  <a :href="project.node.link" class="overflow-hidden aspect-ratio-16/9 relative cursor-pointer shadow-lg z-10 block" target="_blank">
+                    <img v-lazy="project.node.attachments[1].url" :alt="project.node.name" class="absolute left-0 w-full h-full object-cover self-start" />
+                  </a>
+                  <div class="absolute left-1/2 top-1/2 -translate-center bg-white dark:bg-black rounded-full w-6 h-6 flex items-center justify-center shadow-md">
+                    <div class="loader text-green-500 border-2 w-4 h-4"></div>
+                  </div>
                 </div>
               </div>
-              <div class="w-full sm:-mt-4 sm:px-0 sm:w-3/4 lg:w-2/3 lg:-mt-24 lg:w-2/5 xl:-mt-32" :class="{'lg:-mr-6 lg:text-right': index % 2 === 0, 'lg:-ml-6': index % 2 !== 0 }">
+              <div class="w-full sm:px-0 sm:w-3/4 lg:w-2/5" :class="{'lg:-mr-6 lg:text-right': index % 2 === 0, 'lg:-ml-6': index % 2 !== 0 }">
                 <div class="z-10 relative left-0 py-4 px-4 lg:px-12 w-full bottom-0 bg-white dark:bg-black text-dark-gray-900 dark:text-white transition-all shadow-xl">
-                  <h3 v-html="project.node.name" class="text-lg font-medium text-black dark:text-white"></h3>
-                  <div v-html="project.node.notes" class="text-xs text-gray-600"></div>
+                  <h3 v-html="project.node.name" class="text-lg font-semibold text-black dark:text-white"></h3>
+                  <div v-html="project.node.notes" class="text-sm text-gray-600"></div>
                 </div>
-                <a :href="project.node.link" class="px-4 lg:px-12 block py-4 flex text-green-500 hover:text-green-600 lg:justify-end items-center" :class="{'lg:flex-row': index % 2 === 0, 'lg:flex-row-reverse': index % 2 !== 0 }">
+                <a :href="project.node.link" class="px-4 lg:px-12 block py-4 flex text-green-500 hover:text-green-600 lg:justify-end items-center font-semibold" :class="{'lg:flex-row': index % 2 === 0, 'lg:flex-row-reverse': index % 2 !== 0 }">
                   Prohlédnout
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="w-2 h-2 lg:w-4 lg:h-4 current-color" :class="{'ml-4': index % 2 === 0, 'ml-4 lg:ml-0 lg:mr-4 lg:rotate-180': index % 2 !== 0 }"><title>arrow-right</title><g fill="currentcolor"><polygon points="9.3,1.3 7.9,2.7 12.2,7 0,7 0,9 12.2,9 7.9,13.3 9.3,14.7 16,8 "></polygon></g></svg>
                 </a>
@@ -94,6 +99,38 @@
         </div>
       </div>
     </div>
+    <div class="py-8 xl:py-32 relative lg:min-h-screen flex flex-col z-40 items-center justify-center transition-bg flex-grow shadow-lg bg-white" id="contact">
+      <div class="w-full max-w-4xl">
+        <div class="px-8 xl:px-32 flex flex-col w-full">
+          <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center" v-html="$page.homepage.textblock_3">
+          </div>
+        </div>
+        <form name="contact" action="/#uspesne-odeslano" method="POST" data-netlify="true" class="flex flex-wrap px-2 sm:px-12">
+          <p class="mb-4 w-full md:w-1/2 px-2">
+            <label class="block text-gray-700 text-sm font-bold mb-1" for="name">
+              Jméno
+            </label>
+            <input type="text" name="name" class="appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+          </p>
+          <p class="mb-4 w-full md:w-1/2 px-2">
+            <label class="block text-gray-700 text-sm font-bold mb-1" for="email">
+              E-mail
+            </label>
+            <input type="email" name="email" class="appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+          </p>
+          <p class="mb-4 w-full px-2">
+            <label class="block text-gray-700 text-sm font-bold mb-1" for="message">
+              Zpráva
+            </label>
+            <textarea name="message" rows="6" class="appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+          </p>
+          <p class="mb-4 text-center w-full px-2">
+            <button type="submit" class="px-8 py-2 lg:px-12 bg-green-500 hover:bg-white dark-hover:bg-white text-white hover:text-green-500 rounded-full text-md font-bold lg:text-lg transition-all uppercase hover:scale-105">Odeslat</button>
+          </p>
+        </form>
+      </div>
+    </div>
+
   </Layout>
 </template>
 
@@ -106,6 +143,7 @@ query{
     button_link,
     textblock_1,
     textblock_2,
+    textblock_3,
     skill_1_header,
     skill_2_header,
     skill_3_header,
@@ -119,13 +157,14 @@ query{
     title,
     footer_text
   },
-  projects: allProjects(sortBy: "order", order: ASC) {
+  projects: allProjects(sortBy: "order", order: DESC) {
     edges {
       node {
         name
         notes
         link
         order
+        date
         attachments {
           url,
           thumbnails{
@@ -141,7 +180,6 @@ query{
 </page-query>
 
 <script>
-import VueLazyLoad from 'vue-lazyload'
 export default {
   metaInfo() {
     return {

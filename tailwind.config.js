@@ -12,6 +12,10 @@ module.exports = {
       borderWidth: {
         '14': '14px',
         '64': '64px', 
+      },
+      inset: {
+        'full' : '100%',
+        '1/2' : '50%'
       }
     },
     fluidContainer: {
@@ -130,7 +134,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Nunito Sans',
+        'Nunito sans',
         'Roboto',
         '-apple-system',
         'BlinkMacSystemFont',
@@ -205,7 +209,9 @@ module.exports = {
       'full': '100%',
       '-full': '-100%',
       '-1/2': '-50%',
-      '0': '0'
+      '0': '0',
+      'center': ['100%', '100%'],
+      '-center': ['-100%', '-100%'],
     },
     rotate: { // defaults to {}
       '90': '90deg',
