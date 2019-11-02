@@ -5,7 +5,7 @@
       <header class="w-full sm:-ml-32 fixed z-60">
         <nav class="flex flex-wrap justify-between sm:justify-start items-center bg-gray-200 dark:bg-gray-900 transition-bg py-4 px-8 sm:p-8 relative">
           <div class="flex flex-row items-center text-left w-auto">
-            <g-link class="relative z-20">
+            <g-link class="relative z-20" to="/">
               <g-image src="../../static/danek.jpg" :alt="$static.site.title" class="w-8 h-8 sm:w-16 sm:h-16 rounded-full" />
             </g-link>
             <div class="flex fixed left-0 top-0 min-h-screen w-16 sm:w-32 z-10">
@@ -38,12 +38,11 @@
             </ul>
         </nav>
       </header>
-
       <div class="flex-grow">
         <slot/>
       </div>
-      <footer class="bg-gray-200 dark:bg-gray-900 transition-bg z-40">
-        <div class="c-container mx-auto flex flex-col lg:flex-row items-center justify-between pt-8">
+      <footer class="bg-gray-200 dark:bg-gray-900 transition-bg h-16 z-40">
+        <div class="c-container mx-auto flex flex-col lg:flex-row items-center justify-between pt-6">
           <div class="text-gray-500 dark:text-gray-700 text-center text-xs md:text-sm px-16 w-full editor" v-html="$static.site.footer_text"></div>
         </div>
       </footer>
@@ -61,7 +60,7 @@ query {
     title,
     footer_text
   },
-  navigation: findNavigation(sort: { field: "order", order: "ASC" }){
+  navigation: findNavigation{
     result{
       title,
       url,

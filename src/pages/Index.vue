@@ -99,13 +99,13 @@
         </div>
       </div>
     </div>
-    <div class="py-8 xl:py-32 relative lg:min-h-screen flex flex-col z-40 items-center justify-center transition-bg flex-grow shadow-lg bg-white dark:bg-black" id="contact">
-      <div class="w-full max-w-4xl">
+    <div class="relative lg:min-h-screen flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200" id="contact">
+      <div class="py-8 xl:py-16 w-full max-w-4xl shadow-lg bg-white dark:bg-black">
         <div class="px-8 xl:px-32 flex flex-col w-full">
           <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center" v-html="$page.homepage.textblock_3">
           </div>
         </div>
-        <form name="contact" action="/#uspesne-odeslano" method="POST" data-netlify="true" class="flex flex-wrap px-2 sm:px-12">
+        <form name="contact" action="/uspesne-odeslano" method="POST" data-netlify="true" class="flex flex-wrap px-2 sm:px-12">
           <p class="mb-4 w-full md:w-1/2 px-2">
             <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="name">
               Jméno
@@ -130,7 +130,6 @@
         </form>
       </div>
     </div>
-
   </Layout>
 </template>
 
