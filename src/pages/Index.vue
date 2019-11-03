@@ -105,7 +105,19 @@
           <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center" v-html="$page.homepage.textblock_3">
           </div>
         </div>
-        <form name="contact" action="/uspesne-odeslano/" method="POST" data-netlify="true" class="flex flex-wrap px-2 sm:px-12">
+        <form name="contact"
+              action="/uspesne-odeslano/"
+              method="POST"
+              v-on:submit.prevent="handleSubmit"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              class="flex flex-wrap px-2 sm:px-12">
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden class="hidden">
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
           <p class="mb-4 w-full md:w-1/2 px-2">
             <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="name">
               Jméno
@@ -180,9 +192,33 @@ query{
 
 <script>
 export default {
+  data() {
+    return {
+      formData: {},
+    }
+  },
   metaInfo() {
     return {
       title: this.$page.homepage.title
+    }
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+              .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+              .join('&')
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+              .then(() => this.$router.push('/uspesne-odeslano'))
+              .catch(error => alert(error))
     }
   }
 }
