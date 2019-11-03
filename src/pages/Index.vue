@@ -119,19 +119,19 @@
             </label>
           </p>
           <p class="mb-4 w-full md:w-1/2 px-2">
-            <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="name">
+            <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="name" v-model="formData.name">
               Jméno
             </label>
             <input type="text" name="name" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
           </p>
           <p class="mb-4 w-full md:w-1/2 px-2">
-            <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="email">
+            <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="email" v-model="formData.email">
               E-mail
             </label>
             <input type="email" name="email" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
           </p>
           <p class="mb-4 w-full px-2">
-            <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="message">
+            <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="message" v-model="formData.message">
               Zpráva
             </label>
             <textarea name="message" rows="6" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
