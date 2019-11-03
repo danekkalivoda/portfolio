@@ -85,8 +85,8 @@
                   </div>
                 </div>
               </div>
-              <div class="w-full sm:px-0 sm:w-3/4 lg:w-2/5" :class="{'lg:-mr-6 lg:text-right': index % 2 === 0, 'lg:-ml-6': index % 2 !== 0 }">
-                <div class="z-10 relative left-0 py-4 sm:px-4 px-8 md:px-12 w-full bottom-0 bg-white dark:bg-black text-dark-gray-900 dark:text-white transition-all shadow-xl">
+              <div class="w-full sm:px-0 sm:w-3/4 lg:w-2/5 sm:-mt-4" :class="{'lg:-mr-6 lg:text-right': index % 2 === 0, 'lg:-ml-6': index % 2 !== 0 }">
+                <div class="z-10 relative left-0 py-4 sm:px-4 px-8 md:px-12 md:py-8 w-full bottom-0 bg-white dark:bg-black text-dark-gray-900 dark:text-white transition-all shadow-xl">
                   <h3 v-html="project.node.name" class="text-lg font-semibold text-black dark:text-white"></h3>
                   <div v-html="project.node.notes" class="text-sm text-gray-600"></div>
                 </div>
