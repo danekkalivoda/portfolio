@@ -105,7 +105,7 @@
           <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center" v-html="$page.homepage.textblock_3">
           </div>
         </div>
-        <form name="contact" action="/uspesne-odeslano" method="POST" data-netlify="true" class="flex flex-wrap px-2 sm:px-12">
+        <form name="contact" action="/uspesne-odeslano/" method="POST" data-netlify="true" class="flex flex-wrap px-2 sm:px-12">
           <p class="mb-4 w-full md:w-1/2 px-2">
             <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="name">
               Jméno
