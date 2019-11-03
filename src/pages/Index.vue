@@ -100,7 +100,7 @@
       </div>
     </div>
     <div class="relative lg:min-h-screen flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 dark:bg-gray-900" id="contact">
-      <div class="py-8 xl:py-16 w-full max-w-4xl shadow-lg bg-white dark:bg-black transition-bg">
+      <div class="py-8 xl:py-16 mb-8 w-full max-w-4xl shadow-lg bg-white dark:bg-black transition-bg">
         <div class="px-8 xl:px-32 flex flex-col w-full">
           <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center" v-html="$page.homepage.textblock_3">
           </div>
@@ -122,19 +122,19 @@
             <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="name">
               Jméno
             </label>
-            <input type="text" name="name" v-model="formData.name" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+            <input type="text" name="name" required v-model="formData.name" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-900 dark:text-gray-500 leading-tight focus:outline-none focus:shadow-outline"/>
           </p>
           <p class="mb-4 w-full md:w-1/2 px-2">
             <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="email">
               E-mail
             </label>
-            <input type="email" name="email" v-model="formData.email" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+            <input type="email" name="email" required v-model="formData.email" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-900 dark:text-gray-500 leading-tight focus:outline-none focus:shadow-outline"/>
           </p>
           <p class="mb-4 w-full px-2">
             <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="message">
               Zpráva
             </label>
-            <textarea name="message" rows="6" v-model="formData.message" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            <textarea name="message" rows="6" v-model="formData.message" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-900 dark:text-gray-500 leading-tight focus:outline-none focus:shadow-outline"></textarea>
           </p>
           <p class="mb-4 text-center w-full px-2">
             <button type="submit" class="px-8 py-2 lg:px-12 bg-green-500 hover:bg-white dark-hover:bg-white text-white hover:text-green-500 rounded-full text-md font-bold lg:text-lg transition-all uppercase hover:scale-105">Odeslat</button>
