@@ -99,6 +99,18 @@
         </div>
       </div>
     </div>
+
+    <div class="relative lg:min-h-screen flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 dark:bg-gray-900" id="references">
+      <div class="py-8 xl:py-16 mb-8 w-full">
+        <div class="flex flex-col max-w-6xl mx-auto">
+          <h2>Co o mě říkají klienti?</h2>
+          <div class="flex -mx-4">
+            <reference v-for="(reference, index) in $page.references.result" :key="reference.name" :reference="reference"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="relative lg:min-h-screen flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 dark:bg-gray-900" id="contact">
       <div class="py-8 xl:py-16 mb-8 w-full max-w-4xl shadow-lg bg-white dark:bg-black transition-bg">
         <div class="px-8 xl:px-32 flex flex-col w-full">
@@ -111,7 +123,7 @@
               v-on:submit.prevent="handleSubmit"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              class="flex flex-wrap px-2 sm:px-12">
+              class="flex flex-wrap px-6 sm:px-12">
           <input type="hidden" name="form-name" value="contact" />
           <p hidden class="hidden">
             <label>
@@ -168,6 +180,18 @@ query{
     title,
     footer_text
   },
+  references: findReferences {
+    result{
+        name
+        company
+        created
+        content
+        position
+        image{
+          url
+        }
+    }
+  },
   projects: allProjects(sortBy: "order", order: DESC) {
     edges {
       node {
@@ -191,7 +215,12 @@ query{
 </page-query>
 
 <script>
+import Reference from '../components/Reference.vue';
+
 export default {
+  components: {
+    Reference
+  },
   data() {
     return {
       formData: {},
@@ -203,6 +232,7 @@ export default {
     }
   },
   methods: {
+
     encode(data) {
       return Object.keys(data)
               .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
