@@ -19,8 +19,8 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss());
 
 module.exports = {
   siteName: 'Daniel Kalivoda',
-  siteDescription: 'Mám rád funkční věci, které vycházejí z vysokých nároků klienta. Navrhuji weby, mobilní aplikace a UI/UX interních informačních systémů. Tištěnou grafiku u mě nehledejte.',
-  siteUrl: 'https://kalivoda.netlify.com',
+  siteDescription: 'Mám rád funkční věci, které vycházejí z vysokých nároků klienta. Navrhuji weby, mobilní aplikace a UI/UX interních informačních systémů.',
+  siteUrl: 'https://kalivoda.design',
   plugins: [
     {
       use: 'gridsome-source-graphql',

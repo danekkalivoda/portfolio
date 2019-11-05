@@ -19,7 +19,7 @@
               </span>
           </div>
         </div>
-        <button @click="toggle" class="flex sm:hidden items-center p-3 text-gray-700 dark:text-gray-400 hover:text-green-500 outline-none z-20">
+        <button @click="toggle" aria-label="Menu trigger" class="flex sm:hidden items-center p-3 text-gray-700 dark:text-gray-400 hover:text-green-500 outline-none z-20">
           <svg class="current-color h-3 w-3" :class="isOpen ? 'hidden': 'block'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentcolor" stroke-width="3"><path d="M0 2.5 L16 2.5"/><path d="M0 8 L16 8"/><path d="M0 13.5 L16 13.5"/></svg>
           <svg class="current-color h-3 w-3" :class="isOpen ? 'block': 'hidden'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentcolor" stroke-width="3"><path d="M1.0606601717798212 1.0606601717798212 L14.939339828220179 14.939339828220179"/><path d="M14.939339828220179 1.0606601717798212 L1.0606601717798212 14.939339828220179"/></svg>
         </button>

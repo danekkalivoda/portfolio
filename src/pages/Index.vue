@@ -77,7 +77,7 @@
             <div v-for="(project, index) in $page.projects.edges" :key="project.node.name" class="group flex items-end justify-center px-2 mb-16 mt-4 w-full relative flex-wrap lg:flex-no-wrap" :class="{'lg:flex-row-reverse': index % 2 === 0, 'lg:flex-row': index % 2 !== 0 }">
               <div class="w-full lg:w-1/2 xl:w-2/3 transition-all group-hover:scale-102">
                 <div class="relative">
-                  <a :href="project.node.link" class="overflow-hidden aspect-ratio-16/9 relative cursor-pointer shadow-lg z-10 block" target="_blank">
+                  <a :href="project.node.link" rel="noreferrer" class="overflow-hidden aspect-ratio-16/9 relative cursor-pointer shadow-lg z-10 block" target="_blank">
                     <img v-lazy="project.node.attachments[1].url" :alt="project.node.name" class="absolute left-0 w-full h-full object-cover self-start" />
                   </a>
                   <div class="absolute left-1/2 top-1/2 -translate-center bg-white dark:bg-black rounded-full w-6 h-6 flex items-center justify-center shadow-md">
@@ -88,9 +88,9 @@
               <div class="w-full sm:px-0 sm:w-3/4 lg:w-2/5 sm:-mt-4" :class="{'lg:-mr-6 lg:text-right': index % 2 === 0, 'lg:-ml-6': index % 2 !== 0 }">
                 <div class="z-10 relative left-0 py-4 sm:px-4 px-8 md:px-12 md:py-8 w-full bottom-0 bg-white dark:bg-black text-dark-gray-900 dark:text-white transition-all shadow-xl">
                   <h3 v-html="project.node.name" class="text-lg font-semibold text-black dark:text-white"></h3>
-                  <div v-html="project.node.notes" class="text-sm text-gray-600"></div>
+                  <div v-html="project.node.notes" class="text-sm text-gray-600 dark:text-gray-500"></div>
                 </div>
-                <a :href="project.node.link" class="sm:px-4 px-8 md:px-12 block py-4 flex text-green-500 hover:text-green-600 lg:justify-end items-center font-semibold" :class="{'lg:flex-row': index % 2 === 0, 'lg:flex-row-reverse': index % 2 !== 0 }">
+                <a :href="project.node.link" rel="noreferrer" class="sm:px-4 px-8 md:px-12 block py-4 flex text-green-500 hover:text-green-600 lg:justify-end items-center font-semibold" :class="{'lg:flex-row': index % 2 === 0, 'lg:flex-row-reverse': index % 2 !== 0 }">
                   Prohlédnout
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="w-2 h-2 lg:w-4 lg:h-4 current-color" :class="{'ml-4': index % 2 === 0, 'ml-4 lg:ml-0 lg:mr-4 lg:rotate-180': index % 2 !== 0 }"><title>arrow-right</title><g fill="currentcolor"><polygon points="9.3,1.3 7.9,2.7 12.2,7 0,7 0,9 12.2,9 7.9,13.3 9.3,14.7 16,8 "></polygon></g></svg>
                 </a>
@@ -122,22 +122,22 @@
             <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="name">
               Jméno
             </label>
-            <input type="text" name="name" required v-model="formData.name" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-900 dark:text-gray-500 leading-tight focus:outline-none focus:shadow-outline"/>
+            <input type="text" name="name" id="name" required v-model="formData.name" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-900 dark:text-gray-500 leading-tight focus:outline-none focus:shadow-outline"/>
           </p>
           <p class="mb-4 w-full md:w-1/2 px-2">
             <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="email">
               E-mail
             </label>
-            <input type="email" name="email" required v-model="formData.email" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-900 dark:text-gray-500 leading-tight focus:outline-none focus:shadow-outline"/>
+            <input type="email" name="email" id="email" required v-model="formData.email" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-900 dark:text-gray-500 leading-tight focus:outline-none focus:shadow-outline"/>
           </p>
           <p class="mb-4 w-full px-2">
             <label class="block text-gray-700 dark:text-gray-400 text-sm font-bold mb-1" for="message">
               Zpráva
             </label>
-            <textarea name="message" rows="6" v-model="formData.message" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-900 dark:text-gray-500 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+            <textarea name="message" id="message" rows="6" v-model="formData.message" class="appearance-none transition-all border dark:border-gray-800 dark:bg-black w-full py-2 px-3 text-gray-900 dark:text-gray-500 leading-tight focus:outline-none focus:shadow-outline"></textarea>
           </p>
           <p class="mb-4 text-center w-full px-2">
-            <button type="submit" class="px-8 py-2 lg:px-12 bg-green-500 hover:bg-white dark-hover:bg-white text-white hover:text-green-500 rounded-full text-md font-bold lg:text-lg transition-all uppercase hover:scale-105">Odeslat</button>
+            <button type="submit" aria-label="Send e-mail" class="px-8 py-2 lg:px-12 bg-green-500 hover:bg-white dark-hover:bg-white text-white hover:text-green-500 rounded-full text-md font-bold lg:text-lg transition-all uppercase hover:scale-105">Odeslat</button>
           </p>
         </form>
       </div>
