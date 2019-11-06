@@ -74,7 +74,7 @@
       </div>
       <div class="w-full max-w-6xl overflow-hidden sm:overflow-visible">
         <div class="-mx-2 flex flex-wrap">
-            <div v-for="(project, index) in $page.projects.edges" :key="project.node.name" class="group flex items-end justify-center px-2 mb-16 mt-4 w-full relative flex-wrap lg:flex-no-wrap" :class="{'lg:flex-row-reverse': index % 2 === 0, 'lg:flex-row': index % 2 !== 0 }">
+            <div v-for="(project, index) in $page.projects.edges" :key="project.node.name" class="group flex items-end justify-center px-2 mb-8 md:mb-16 mt-4 w-full relative flex-wrap lg:flex-no-wrap" :class="{'lg:flex-row-reverse': index % 2 === 0, 'lg:flex-row': index % 2 !== 0 }">
               <div class="w-full lg:w-1/2 xl:w-2/3 transition-all group-hover:scale-102">
                 <div class="relative">
                   <a :href="project.node.link" rel="noreferrer" class="overflow-hidden aspect-ratio-16/9 relative cursor-pointer shadow-lg z-10 block" target="_blank">
@@ -100,20 +100,20 @@
       </div>
     </div>
 
-    <div class="relative lg:min-h-screen flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 dark:bg-gray-900" id="references">
+    <div class="relative flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 dark:bg-gray-900" id="references">
       <div class="py-8 xl:py-16 mb-8 w-full">
         <div class="flex flex-col max-w-6xl mx-auto">
           <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center">
             <h2>Co o mě říkají klienti?</h2>
           </div>
-          <div class="flex -mx-4">
+          <div class="flex md:-mx-4 justify-center">
             <reference v-for="(reference, index) in $page.references.result" :key="reference.name" :reference="reference"/>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="relative lg:min-h-screen flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 dark:bg-gray-900" id="contact">
+    <div class="relative flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 lg:py-32 dark:bg-gray-900" id="contact">
       <div class="py-8 xl:py-16 mb-8 w-full max-w-4xl shadow-lg bg-white dark:bg-black transition-bg">
         <div class="px-8 xl:px-32 flex flex-col w-full">
           <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center" v-html="$page.homepage.textblock_3">
