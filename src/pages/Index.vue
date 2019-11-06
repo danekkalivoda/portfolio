@@ -103,7 +103,9 @@
     <div class="relative lg:min-h-screen flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 dark:bg-gray-900" id="references">
       <div class="py-8 xl:py-16 mb-8 w-full">
         <div class="flex flex-col max-w-6xl mx-auto">
-          <h2>Co o mě říkají klienti?</h2>
+          <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center">
+            <h2>Co o mě říkají klienti?</h2>
+          </div>
           <div class="flex -mx-4">
             <reference v-for="(reference, index) in $page.references.result" :key="reference.name" :reference="reference"/>
           </div>
