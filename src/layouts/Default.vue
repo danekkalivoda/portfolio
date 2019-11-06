@@ -7,11 +7,11 @@
           <g-link class="relative z-20" to="/">
             <g-image src="../../static/danek.jpg" :alt="$static.site.title" class="w-8 h-8 sm:w-16 sm:h-16 rounded-full" />
           </g-link>
-          <div class="flex fixed left-0 top-0 min-h-screen w-16 sm:w-32 z-10">
+          <div class="flex fixed left-0 top-0 min-h-screen w-16 sm:w-32 z-30">
             <div class="hidden sm:block w-full self-stretch mt-16 sm:mt-32 mb-8 sm:mb-16 border-r border-gray-400 dark:border-gray-800 -translate-x-1/2 transition-all"></div>
             <theme-switcher :theme="theme" @themeChanged="updateTheme" />
           </div>
-          <div class="fixed left-0 top-0 z-40 ml-16 sm:ml-0 sm:rotate-90 transform-bl">
+          <div class="fixed left-0 top-0 z-40 ml-16 sm:ml-0 sm:rotate-90 transform-bl z-10">
             <span class="inline-block sm:rotate-180 my-6 sm:my-12 pr-2 pl-2 sm:pl-8  bg-gray-200 dark:bg-gray-900 text-sm sm:text-lg uppercase font-semibold tracking-tight text-green-500 transition-bg">
                 <span class="-translate-y-full">
                   {{$static.site.title}}
@@ -69,7 +69,7 @@ query {
 </static-query>
 
 <script>
-import ThemeSwitcher from '../components/ThemeSwitcher'
+import ThemeSwitcher from '../components/ThemeSwitcher';
 
 export default {
   components: {
