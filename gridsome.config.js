@@ -31,15 +31,6 @@ module.exports = {
       },
     },
     {
-      use: '@gridsome/source-airtable',
-      options: {
-        apiKey: 'keygEegw3zV3Xtdni', // required
-        baseId: 'appINg4MozNchxoF8', // required
-        tableName: 'Projects', // required
-        typeName: 'Projects', // required
-      }
-    },
-    {
       use: '@gridsome/plugin-sitemap',
       options: {
         cacheTime: 600000, // default

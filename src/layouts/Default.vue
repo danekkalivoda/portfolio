@@ -58,7 +58,7 @@ query {
     title,
     footer_text
   },
-  navigation: findNavigation{
+  navigation: findNavigation(sort: { field: "order", order: "ASC" }){
     result{
       title,
       url,
