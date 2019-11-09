@@ -77,6 +77,10 @@
             <projects v-for="(project, index) in $page.projects.result" :key="project.name" :project="project" :index="index"/>
         </div>
       </div>
+      <div class="flex relative w-full items-center justify-center mt-4 lg:mt-8 max-w-6xl">
+        <div class="w-full h-px absolute left-0 top-1/2 bg-gray-400 dark:bg-gray-800 transition-bg"></div>
+        <g-link :to="$page.homepage.projects_button_link"  class="relative z-10 px-8 py-2 lg:px-12 lg:py-4 text-green-500 font-bold hover:text-gray-900 dark-hover:text-white rounded-full text-sm border-2 border-gray-300 bg-gray-100 dark:bg-gray-800 dark:border-gray-700 transition-all uppercase hover:scale-105">{{ $page.homepage.projects_button_text}}</g-link>
+      </div>
     </div>
 
     <div class="relative flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 dark:bg-gray-900" id="references">
@@ -158,6 +162,8 @@ query{
     skill_3_text,
     skills_button_text,
     skills_button_link,
+    projects_button_text,
+    projects_button_link,
   },
   site: SiteSetting {
     title,
@@ -177,6 +183,7 @@ query{
   },
   projects: findProjects(
     sort: { field: "order", order: "ASC" }
+    limit: 3
     filter: {
       AND: [
           { field: "active", operator: "=", value:"true"},

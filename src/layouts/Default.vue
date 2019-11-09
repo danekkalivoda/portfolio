@@ -4,7 +4,7 @@
     <header class="w-full sm:-ml-32 fixed z-60">
       <nav class="flex flex-wrap justify-between sm:justify-start items-center bg-gray-200 dark:bg-gray-900 transition-bg py-4 px-8 sm:p-8 relative">
         <div class="flex flex-row items-center text-left w-auto">
-          <g-link class="relative z-20" to="/">
+          <g-link class="relative z-40" to="/">
             <g-image src="../../static/danek.jpg" :alt="$static.site.title" class="w-8 h-8 sm:w-16 sm:h-16 rounded-full" />
           </g-link>
           <div class="flex fixed left-0 top-0 min-h-screen w-16 sm:w-32 z-30">
@@ -58,7 +58,9 @@ query {
     title,
     footer_text
   },
-  navigation: findNavigation(sort: { field: "order", order: "ASC" }){
+  navigation: findNavigation(
+      sort: { field: "order", order: "ASC" }
+    ){
     result{
       title,
       url,
