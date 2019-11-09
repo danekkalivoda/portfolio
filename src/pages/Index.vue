@@ -85,7 +85,7 @@
           <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center">
             <h2>Co o mě říkají klienti?</h2>
           </div>
-          <div class="flex md:-mx-4 justify-center">
+          <div class="flex mx-2 sm:mx-0 md:-mx-4 justify-center flex-wrap">
             <references v-for="(reference, index) in $page.references.result" :key="reference.name" :reference="reference" :index="index"/>
           </div>
         </div>
@@ -93,7 +93,8 @@
     </div>
 
     <div class="relative flex flex-col z-40 items-center justify-center transition-bg flex-grow bg-gray-200 lg:py-32 dark:bg-gray-900" id="contact">
-      <div class="py-8 xl:py-16 mb-8 w-full max-w-4xl shadow-lg bg-white dark:bg-black transition-bg">
+      <div class="max-w-6xl mx-auto w-full">
+        <div class="py-8 xl:py-16 mb-8 w-full shadow-lg bg-white dark:bg-black transition-bg">
         <div class="px-8 xl:px-32 flex flex-col w-full">
           <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center" v-html="$page.homepage.textblock_3">
           </div>
@@ -104,7 +105,7 @@
               v-on:submit.prevent="handleSubmit"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              class="flex flex-wrap px-6 sm:px-12">
+              class="flex flex-wrap px-6 sm:px-12 max-w-2xl mx-auto">
           <input type="hidden" name="form-name" value="contact" />
           <p hidden class="hidden">
             <label>
@@ -133,6 +134,7 @@
             <button type="submit" aria-label="Send e-mail" class="px-8 py-2 lg:px-12 bg-green-500 hover:bg-white dark-hover:bg-white text-white hover:text-green-500 rounded-full text-md font-bold lg:text-lg transition-all uppercase hover:scale-105">Odeslat</button>
           </p>
         </form>
+      </div>
       </div>
     </div>
   </Layout>
