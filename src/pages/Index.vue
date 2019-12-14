@@ -169,7 +169,7 @@ query{
     title,
     footer_text
   },
-  references: findReferences {
+  references: findReferences(sort: { field: "order", order: "ASC" }){
     result{
         name
         company
