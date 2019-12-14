@@ -124,3 +124,18 @@ h1{
     }
   }
 }
+.referencesList{
+  @apply mx-2;
+  .reference{
+    @apply inline-flex;
+  }
+  @screen sm{
+    @apply mx-0
+  }
+  @screen md{
+    @apply -mx-4;
+  }
+  @screen lg{
+    column-count: 2;
+  }
+}

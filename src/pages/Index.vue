@@ -89,7 +89,7 @@
           <div class="editor text-gray-900 dark:text-gray-300 w-full c-container text-center">
             <h2>Co o mě říkají klienti?</h2>
           </div>
-          <div class="flex mx-2 sm:mx-0 md:-mx-4 justify-center flex-wrap">
+          <div class="referencesList">
             <references v-for="(reference, index) in $page.references.result" :key="reference.name" :reference="reference" :index="index"/>
           </div>
         </div>
