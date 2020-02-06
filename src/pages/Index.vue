@@ -208,7 +208,6 @@ query{
 <script>
 import References from '../components/References.vue';
 import Projects from '../components/Projects.vue';
-
 export default {
   components: {
     References,
