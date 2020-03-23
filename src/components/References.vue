@@ -1,7 +1,7 @@
 <template>
     <div class="w-full md:p-4 mb-2 md:mb-4 reference">
-        <div class="flex w-full flex-col bg-white dark:bg-black shadow-lg">
-            <div class="flex items-center px-6 md:px-8 py-4 md:py-6 border-b dark:border-gray-900">
+        <div class="flex w-full flex-col transition-bg duration-150 ease-in bg-white dark:bg-black shadow-lg">
+            <div class="flex items-center px-6 md:px-8 py-4 md:py-6 transition-all duration-150 ease-in border-b dark:border-gray-900">
                 <g-image v-lazy="reference.image.url" :src="reference.image.url" v-if="reference.image" width="120" height="120" fit="contain" class="rounded-full h-20 mr-4"/>
                 <div class="block w-full">
                     <h3 v-html="reference.name" class="text-base font-bold text-green-500"></h3>

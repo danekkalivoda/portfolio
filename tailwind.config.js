@@ -16,7 +16,54 @@ module.exports = {
       inset: {
         'full' : '100%',
         '1/2' : '50%'
-      }
+      },
+      transitionProperty: theme => ({
+        'bg': 'background-color'
+      }),
+      willChange: { // defaults to these values
+        'auto': 'auto',
+        'scroll': 'scroll-position',
+        'contents': 'contents',
+        'opacity': 'opacity',
+        'transform': 'transform',
+      },
+      transform: { // defaults to this value
+        'none': 'none',
+      },
+      translate: { // defaults to {}
+        '1/2': '50%',
+        'full': '100%',
+        '-full': '-100%',
+        '-1/2': '-50%',
+        '0': '0',
+        'center': ['100%', '100%'],
+        '-center': ['-100%', '-100%'],
+      },
+      rotate: { // defaults to {}
+        '90': '90deg',
+        '-90': '-90deg',
+        '180': '180deg',
+        '270': '270deg',
+        '3d': ['0', '1', '0.5', '45deg'],
+      },
+      transformOrigin: { // defaults to these values
+        't': 'top',
+        'tr': 'top right',
+        'r': 'right',
+        'br': 'bottom right',
+        'b': 'bottom',
+        'bl': 'bottom left',
+        'l': 'left',
+        'tl': 'top left',
+      },
+      scale: theme => ({ // defaults to {}
+        '90': '0.9',
+        '95': '0.95',
+        '100': '1',
+        '102': '1.02',
+        '105': '1.05',
+        '110': '1.1'
+      }),
     },
     fluidContainer: {
       'default': {
@@ -134,7 +181,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Nunito sans',
+        '"League Spartan Variable"',
         'Roboto',
         '-apple-system',
         'BlinkMacSystemFont',
@@ -158,96 +205,12 @@ module.exports = {
         'monospace',
       ],
     },
-    transitionProperty: { // defaults to these values
-      'none': 'none',
-      'all': 'all',
-      'color': 'color',
-      'bg': 'background-color',
-      'border': 'border-color',
-      'colors': ['color', 'background-color', 'border-color'],
-      'opacity': 'opacity',
-      'transform': 'transform',
-    },
-    transitionDuration: { // defaults to these values
-      'default': '250ms',
-      '0': '0ms',
-      '100': '100ms',
-      '250': '250ms',
-      '500': '500ms',
-      '750': '750ms',
-      '1000': '1000ms',
-    },
-    transitionTimingFunction: { // defaults to these values
-      'default': 'ease',
-      'linear': 'linear',
-      'ease': 'ease',
-      'ease-in': 'ease-in',
-      'ease-out': 'ease-out',
-      'ease-in-out': 'ease-in-out',
-    },
-    transitionDelay: { // defaults to these values
-      'default': '0ms',
-      '0': '0ms',
-      '100': '100ms',
-      '250': '250ms',
-      '500': '500ms',
-      '750': '750ms',
-      '1000': '1000ms',
-    },
-    willChange: { // defaults to these values
-      'auto': 'auto',
-      'scroll': 'scroll-position',
-      'contents': 'contents',
-      'opacity': 'opacity',
-      'transform': 'transform',
-    },
-    transform: { // defaults to this value
-      'none': 'none',
-    },
-    translate: { // defaults to {}
-      '1/2': '50%',
-      'full': '100%',
-      '-full': '-100%',
-      '-1/2': '-50%',
-      '0': '0',
-      'center': ['100%', '100%'],
-      '-center': ['-100%', '-100%'],
-    },
-    rotate: { // defaults to {}
-      '90': '90deg',
-      '-90': '-90deg',
-      '180': '180deg',
-      '270': '270deg',
-      '3d': ['0', '1', '0.5', '45deg'],
-    },
-    transformOrigin: { // defaults to these values
-      't': 'top',
-      'tr': 'top right',
-      'r': 'right',
-      'br': 'bottom right',
-      'b': 'bottom',
-      'bl': 'bottom left',
-      'l': 'left',
-      'tl': 'top left',
-    },
-    scale: { // defaults to {}
-      '90': '0.9',
-      '95': '0.95',
-      '100': '1',
-      '102': '1.02',
-      '105': '1.05',
-      '110': '1.1'
-    },
   },
   variants: {
     fluidContainer: ['responsive'],
 
     padding: ['responsive', 'hover', 'focus'],
-
-    transitionProperty: ['responsive'],
-    transitionDuration: ['responsive'],
-    transitionTimingFunction: ['responsive'],
-    transitionDelay: ['responsive'],
+    transitionProperty: ['responsive', 'hover', 'focus'],
     willChange: ['responsive'],
     rotate: ['responsive'],
     transformOrigin: ['responsive'],
@@ -270,11 +233,7 @@ module.exports = {
       marginUtilities: true,  // defaults to true
       negativeMarginUtilities: true,  // defaults to true
     }),
-    require('tailwindcss-transitions')(),
     require('tailwindcss-dark-mode')(),
-    require('tailwindcss-transforms')({
-      '3d': false, // defaults to false
-    }),
     require('tailwindcss-aspect-ratio')(),
   ]
 };

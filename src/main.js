@@ -6,12 +6,13 @@ import DefaultLayout from '~/layouts/Default.vue'
 import VueScrollTo from 'vue-scrollto'
 import VueFuse from 'vue-fuse'
 import VueLazyLoad from 'vue-lazyload'
+import VuePrlx from 'vue-prlx'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
-  Vue.component('Layout', DefaultLayout)
-
-  Vue.use(VueLazyLoad)
+  Vue.component('Layout', DefaultLayout);
+  Vue.use(VuePrlx);
+  Vue.use(VueLazyLoad);
 
   Vue.use(VueScrollTo, {
     duration: 500,
@@ -31,10 +32,10 @@ export default function (Vue, { router, head, isClient }) {
     content: 'Daniel Kalivoda'
   })
 
-  head.link.push({
+/*  head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,800&display=swap&subset=latin-ext'
-  })
+  })*/
 }
 
 

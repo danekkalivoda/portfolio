@@ -18,18 +18,22 @@
 
 <page-query>
 query {
-  posts: findArticles (sort: { field: "created", order: "DESC"}) {
-    total
-    result {
-      id,
-      created,
-      headline,
-      content      
+  posts: unite{
+    findArticles (sort: { field: "created", order: "DESC"}) {
+      total
+      result {
+        id,
+        created,
+        headline,
+        content
+      }
     }
   },
-  site: SiteSetting {
-    title,
-    footer_text
+  site: unite{
+    SiteSetting {
+      title,
+      footer_text
+    }
   }
 }
 </page-query>

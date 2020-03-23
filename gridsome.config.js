@@ -23,9 +23,9 @@ module.exports = {
   siteUrl: 'https://kalivoda.design',
   plugins: [
     {
-      use: 'gridsome-source-graphql',
+      use: '@gridsome/source-graphql',
       options: {
-        url: 'http://unitecms.felix.party/danek/danek/api?token=yQP8qdT584UCIiPe-uawOBp_ZeyWYJNV2YplvblEwq4',
+        url: 'https://unitecms.felix.party/danek/danek/api?token=yQP8qdT584UCIiPe-uawOBp_ZeyWYJNV2YplvblEwq4',
         fieldName: 'unite',
         typeName: 'unite'
       },

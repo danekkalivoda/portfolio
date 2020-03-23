@@ -10,9 +10,11 @@
 
 <page-query>
 query{
-  site: SiteSetting {
-    title,
-    footer_text
+  site: unite{
+    SiteSetting {
+      title,
+      footer_text
+    }
   }
 }
 </page-query>

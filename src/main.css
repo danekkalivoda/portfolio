@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "League Spartan Variable";
+  src: url('LeagueSpartanVariable.woff2') format('woff2-variations');
+  font-weight: 200 900;
+}
+
 html{
   @apply font-sans;
 }
@@ -52,7 +58,7 @@ h1{
     @apply font-bold text-lg text-gray-800;
   }
   a{
-    @apply text-green-500 border-b border-gray-400 inline-block relative transition-all;
+    @apply text-green-500 border-b border-gray-400 inline-block relative transition-all duration-150 ease-in;
     &:hover{
       @apply text-green-600 border-green-500;
     }
@@ -98,7 +104,7 @@ h1{
     @apply font-semibold mb-4 text-gray-900 text-lg;
   }
   a{
-    @apply text-green-500;
+    @apply text-green-500 transition-all duration-150 ease-in;
     &:hover{
       @apply text-green-400;
     }
