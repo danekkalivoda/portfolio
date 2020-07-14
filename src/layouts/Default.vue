@@ -5,7 +5,7 @@
       <nav class="flex flex-wrap justify-between sm:justify-start items-center bg-gray-200 dark:bg-gray-900 transition-bg duration-150 ease-in py-4 px-8 sm:p-8 relative">
         <div class="flex flex-row items-center text-left w-auto">
           <g-link class="relative z-40" to="/">
-            <g-image src="../../static/danek.jpg" :alt="$static.site.SiteSetting.title" class="w-8 h-8 sm:w-16 sm:h-16 rounded-full" />
+            <g-image src="../../static/danek.webp" :alt="$static.site.SiteSetting.title" class="w-8 h-8 sm:w-16 sm:h-16 rounded-full" />
           </g-link>
           <div class="flex fixed left-0 top-0 min-h-screen w-16 sm:w-32 z-30">
             <div class="hidden sm:block w-full self-stretch mt-16 sm:mt-32 mb-8 sm:mb-16 border-r border-gray-400 dark:border-gray-800 transform -translate-x-1/2 transition duration-150 ease-in"></div>
